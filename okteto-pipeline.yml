@@ -2,6 +2,8 @@ icon: https://img.shields.io/github/v/release/ITZ-ZAID/Zaid-Vc-Player?color=blac
 
 deploy:
 
-    - najmalshammal22@cloud.okteto.com deploy --build -f docker-compose.yml
+    - okteto stack deploy --build -f docker-compose.yml
+
+
 
 
