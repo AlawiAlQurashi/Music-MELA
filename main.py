@@ -20,11 +20,11 @@ from datetime import datetime
 
 from Zaid.main import bot, call_py, Test
 
-API_ID = 6435225
-API_HASH = "4e984ea35f854762dcde906dce426c2d"
-TOKEN = "5107223907:AAFV78v04uSnuyiyDQYhL_t9Oj1SlvbZJKg"
+API_ID = 15770953
+API_HASH = "3a26ba5d4f7a43dc34bc7e94b1e1b780"
+TOKEN = "6197437980:AAHPoFVsm2gZn7vCrPWR3gAkKAZCN0lpe9Q"
 
-users = Client("ZPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+users = Client("ALAWE1", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 
 PHONE_NUMBER_TEXT = (
@@ -69,7 +69,7 @@ async def start_bot():
     string = await get_all_session()
     for i in string:
         try:
-            pyroman = Client(session_name=f"{i['string']}", api_id=6435225, api_hash="4e984ea35f854762dcde906dce426c2d", plugins=dict(root=f"Zaid.Player"))
+            pyroman = Client(session_name=f"{i['string']}", api_id=15770953, api_hash="3a26ba5d4f7a43dc34bc7e94b1e1b780", plugins=dict(root=f"Zaid.Player"))
             await pyroman.start()
             user = await pyroman.get_me()
             print(f"[INFO]: Started {user.first_name}")
