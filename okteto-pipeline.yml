@@ -1,11 +1,3 @@
-build:
-
-  hello-world:
-
-    image: najmalshammal22@cloud.okteto.com
-
-    context: .
-
 deploy:
 
   - okteto stack deploy --build -f docker-compose.yml
