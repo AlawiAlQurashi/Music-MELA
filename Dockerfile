@@ -1,4 +1,4 @@
-FROM tcp://buildkit.cloud.okteto.net:443...#2
+FROM ubuntu:20.04 as system
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install ffmpeg -y
 COPY . /app/
