@@ -1,8 +1,23 @@
-FROM ubuntu:20.04 as system
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install ffmpeg -y
-COPY . /app/
+# use base python image with python 2.7
+
+FROM python:2.7
+
+ENV PYTHONUNBUFFERED true 
+
+# set working directory to /app/
+
 WORKDIR /app/
-RUN pip3 install -U pip
-RUN pip3 install -U -r requirements.txt
-CMD python3 main.py
+
+# copy requirements.txt to the image
+
+COPY requirements.txt requirements.txt
+
+# install python dependencies
+
+RUN pip install -r requirements.txt
+
+# copy code base to the image
+
+COPY . .
+
+CMD ["main.py"]
